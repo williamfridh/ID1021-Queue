@@ -41,46 +41,65 @@ class Testing {
 
 		System.out.println(q.toString());
 
+		q.add(1);
 		q.add(2);
+		q.add(3);
 		q.add(4);
+
+		System.out.println(q.toString());
+
+		System.out.println("Removed: " + q.remove() + " Start: " + q.start + " End: " + q.end + "(" + (q.end % q.arr.length) + ")");
+
+		System.out.println(q.toString());
+
+		q.add(5);
+
+		System.out.println(q.toString());
+
+		System.out.println("Removed: " + q.remove() + " Start: " + q.start + " End: " + q.end + "(" + (q.end % q.arr.length) + ")");
+
+		System.out.println("Removed: " + q.remove() + " Start: " + q.start + " End: " + q.end + "(" + (q.end % q.arr.length) + ")");
+
+		System.out.println("Removed: " + q.remove() + " Start: " + q.start + " End: " + q.end + "(" + (q.end % q.arr.length) + ")");
+
+		System.out.println(q.toString());
+
+		System.out.println("Removed: " + q.remove() + " Start: " + q.start + " End: " + q.end + "(" + (q.end % q.arr.length) + ")");
+
+		System.out.println(q.toString());
+
 		q.add(6);
+		q.add(7);
 		q.add(8);
+		q.add(9);
+		System.out.println(q.toString());
+
+		System.out.println("Start: " + q.start + " End: " + q.end + "(" + (q.end % q.arr.length) + ")");
+
 		q.add(10);
-
+		System.out.println("Start: " + q.start + " End: " + q.end + "(" + (q.end % q.arr.length) + ")");
 		System.out.println(q.toString());
-
-		System.out.println(q.remove());
-		System.out.println(q.toString());
-		System.out.println(q.remove());
-		System.out.println(q.toString());
-		System.out.println(q.remove());
-		System.out.println(q.remove());
-		System.out.println(q.remove());
-		System.out.println(q.remove());
-		System.out.println(q.remove());
-		System.out.println(q.remove());
-		System.out.println(q.remove());
+		q.add(11);
 		q.add(12);
-		System.out.println(q.toString());
-		System.out.println(q.remove());
+		System.out.println("Removed: " + q.remove() + " Start: " + q.start + " End: " + q.end + "(" + (q.end % q.arr.length) + ")");
 		q.add(13);
-		q.add(14);
 		System.out.println(q.toString());
+		q.add(14);
 		q.add(15);
 		System.out.println(q.toString());
-		q.add(16);
+		System.out.println("Removed: " + q.remove() + " Start: " + q.start + " End: " + q.end + "(" + (q.end % q.arr.length) + ")");
+		System.out.println("Removed: " + q.remove() + " Start: " + q.start + " End: " + q.end + "(" + (q.end % q.arr.length) + ")");
+		System.out.println("Removed: " + q.remove() + " Start: " + q.start + " End: " + q.end + "(" + (q.end % q.arr.length) + ")");
+		System.out.println("Removed: " + q.remove() + " Start: " + q.start + " End: " + q.end + "(" + (q.end % q.arr.length) + ")");
+		System.out.println("Removed: " + q.remove() + " Start: " + q.start + " End: " + q.end + "(" + (q.end % q.arr.length) + ")");
 		System.out.println(q.toString());
-		System.out.println(q.remove());
-		System.out.println(q.remove());
-		System.out.println(q.remove());
-		System.out.println(q.remove());
-		System.out.println(q.remove());
-		System.out.println(q.remove());
-		System.out.println(q.remove());
-		System.out.println(q.remove());
+		System.out.println("Removed: " + q.remove() + " Start: " + q.start + " End: " + q.end + "(" + (q.end % q.arr.length) + ")");
+		System.out.println("Removed: " + q.remove() + " Start: " + q.start + " End: " + q.end + "(" + (q.end % q.arr.length) + ")");
 		System.out.println(q.toString());
-		q.add(100);
+		System.out.println("Removed: " + q.remove() + " Start: " + q.start + " End: " + q.end + "(" + (q.end % q.arr.length) + ")");
+		System.out.println("Removed: " + q.remove() + " Start: " + q.start + " End: " + q.end + "(" + (q.end % q.arr.length) + ")");
 		System.out.println(q.toString());
+		System.out.println("Removed: " + q.remove() + " Start: " + q.start + " End: " + q.end + "(" + (q.end % q.arr.length) + ")");
 
 	}
 	

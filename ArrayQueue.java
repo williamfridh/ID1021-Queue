@@ -5,12 +5,12 @@ class ArrayQueue {
 	Node head;
 	Node tail;
 
-	Node[] arr;
+	public Node[] arr;
 	int start, end;
 
 
 
-	private class Node {
+	public class Node {
 
 		Integer item;
 
@@ -57,10 +57,10 @@ class ArrayQueue {
 	 * @param item for the node to hold.
 	 */
 	public void add(Integer item) {
-		if (end + 1 == arr.length) // Increase size of array.
+		if (start == (end  + 1) % arr.length && end + 1 > arr.length - 1)
 			resizeArr(true);
 		Node n = new Node(item);
-		arr[++end] = n;
+		arr[++end % arr.length] = n;
 	}
 
 
@@ -75,10 +75,18 @@ class ArrayQueue {
 	public Integer remove() {
 		if (start > end) // Empty queue.
 			return null;
-		if (end - start - 1 <= arr.length / 4 && arr.length > 4) {
+		if (end - start <= arr.length / 4 && arr.length > 4)
 			resizeArr(false);
+		Integer t = arr[start % arr.length].item;
+		arr[start % arr.length] = null; // Setting this to null is unnecessary, but helps with debugging.
+		start++;
+
+		if (arr[start % arr.length] == null) {
+			start = 0;
+			end = -1;
 		}
-		return arr[start++].item;
+
+		return t;
 	}
 
 
@@ -95,7 +103,7 @@ class ArrayQueue {
 		Node[] newArr = new Node[len];
 		int newEnd = -1;
 		while (start <= end) {
-			newArr[++newEnd] = arr[start++];
+			newArr[++newEnd] = arr[start++ % arr.length];
 		}
 		arr = newArr;
 		start = 0;
